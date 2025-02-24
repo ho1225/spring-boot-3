@@ -2,6 +2,7 @@ package com.schh.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * @author schh
@@ -9,10 +10,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create 2025/2/12
  */
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.schh")
 public class MainApplication {
 
         public static void main(String[] args) {
-            SpringApplication.run(MainApplication.class, args);
+
+            //java10
+            var ioc = SpringApplication.run(MainApplication.class, args);
+
+            String[] names = ioc.getBeanDefinitionNames();
+
+            for (String name : names) {
+                System.out.println(name);
+            }
         }
 }
