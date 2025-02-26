@@ -1,9 +1,7 @@
 package com.schh.boot.bean;
 
-import org.springframework.stereotype.Component;
+public class Dog {
 
-//@Component
-public class Cat {
     private Long id;
     private String name;
 
@@ -22,4 +20,6 @@ public class Cat {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }
