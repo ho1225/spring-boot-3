@@ -14,3 +14,26 @@ spring:
       host: localhost
       port: 6379
 
+
+person:
+    name: "John"
+    age: 30
+    birth-day: 2013/01/01 12:12:00
+    like: true
+    child:
+      name: "Peter"
+      age: 10
+      birth-day: 2043/01/01 12:12:00
+      text: ["a","b","c"]
+    dogs:
+      - name: "dog1"
+        age: 3
+      - name: "dog2"
+        age: 4
+    cats:
+      c1:
+        name: "cat1"
+        age: 3
+      c2:
+        name: "cat2"
+        age: 4
